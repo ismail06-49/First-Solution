@@ -1,0 +1,85 @@
+:root{
+    --White: hsl(0, 0%, 100%);
+    --LightGray: hsl(212, 45%, 89%);
+    --GrayishBlue: hsl(220, 15%, 55%);
+    --DarkBlue: hsl(218, 44%, 22%);
+    --margin: 15px 15px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/*
+
+    - For Mobile: 375px
+
+*/
+
+
+body{
+    background-color: var(--LightGray);
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+}
+.attribution, .att{
+    display: none;
+}
+
+.content{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 1fr auto 1fr;
+}
+
+.myWork{
+        background-color: var(--White);
+    width: 300px;
+    height: 470px;
+    grid-area: 2/ 2/ 3/ 3;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.myWork img{
+    width: 270px;
+    margin: var(--margin);
+    margin-bottom: 0;
+}
+.one{
+    color: var(--DarkBlue);
+    font-weight: 700;
+    margin: var(--margin);
+}
+.two{
+    color: var(--GrayishBlue);
+    font-weight: 400;
+    margin: var(--margin);
+}
+
+/*
+
+    - For Desktop: 1440px
+
+*/
+
+ @media (min-width: 1440px) {
+    .myWork{
+        width: 400px;
+        height: 700px;
+        font-size: 30px;
+        border-radius: 20px;
+    }
+    .myWork img{
+        width: 340px;
+        margin: 30px 30px 0;
+    }
+    .one, .two{
+        margin: 30px 30px;
+    }
+    
+ }
